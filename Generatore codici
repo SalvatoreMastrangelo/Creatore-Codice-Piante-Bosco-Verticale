@@ -1,0 +1,99 @@
+code = ''
+balclist = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+
+while True:
+    try:
+        print('inserire circonferenza pianta in metri:')
+        circ = int(100 * (float(input())))
+        if circ > 250:
+            print('pianta troppo grande, inserire misura minore o uguale a 2.5 m')
+            raise ValueError
+        if circ <= 0:
+            print('pianta troppo piccola, inserire misura maggiore o uguale a 0.01 m')
+            raise ValueError
+        break
+    except:
+        print('\n')
+        continue
+
+while True:
+    try:
+        print('inserire altezza pianta in metri:')
+        alt = int(100 * (float(input())))
+        if alt > 900:
+            print('pianta troppo grande, inserire misura minore o uguale a 9 m')
+            raise ValueError
+        if alt <= 0:
+            print('pianta troppo piccola, inserire misura maggiore o uguale a 0.01 m')
+            raise ValueError
+        break
+    except:
+        print('\n')
+        continue
+    
+while True:
+    try:
+        print('inserire piano:')
+        piano = int(input())
+        if piano > 26:
+            print('Piano errato: numero troppo grande.\nInserire un valore minore o uguale a 26')
+            raise ValueError
+        if piano < 0:
+            print('Piano errato: numero troppo piccolo.\nInserire un valore minore o uguale a 0') 
+            raise ValueError
+        break
+    except:
+        print('\n')
+        continue
+
+while True:
+    try:
+        print('inserire balcone(compreso tra A e H):')
+        balc = input()
+        if balc not in balclist:
+            balc = balc.upper()
+        if balc not in balclist:
+            print('inserire una lettera tra A e H')
+            raise TypeError
+        break
+    except:
+        print('\n')
+        continue
+        
+if circ in range(0, 43):
+    code += 'A'
+elif circ in range(43, 85):
+    code += 'B'
+elif circ in range(85, 127):
+    code += 'C'
+elif circ in range(127, 169):
+    code += 'D'
+elif circ in range(169, 211):
+    code += 'E'
+else:
+    code += 'F'
+
+if alt in range(0, 151):
+    code += 'A'
+elif alt in range(151, 301):
+    code += 'B'
+elif alt in range(301, 451):
+    code += 'C'
+elif alt in range(451, 601):
+    code += 'D'
+elif alt in range(601, 751):
+    code += 'E'
+else:
+    code += 'F'
+
+if piano >= 10:
+    code += str(piano)
+else:
+    code += '0'
+    code += str(piano)
+
+code += balc
+
+print()
+print('il codice per questa pianta sarà: ' + code)
+input()
