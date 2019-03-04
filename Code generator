@@ -3,7 +3,7 @@ balclist = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
 while True:
     try:
-        print('input the plant's circumference in meters:')
+        print('input the plant\'s circumference in meters:')
         circ = int(100 * (float(input())))
         if circ > 250:
             print('plant too big, input a value lower or equal to 2.5 meters')
@@ -18,7 +18,7 @@ while True:
 
 while True:
     try:
-        print('input plant's height in meters:')
+        print('input plant\'s height in meters:')
         alt = int(100 * (float(input())))
         if alt > 900:
             print('plant too big, input a value lower or equal to 9 meters')
