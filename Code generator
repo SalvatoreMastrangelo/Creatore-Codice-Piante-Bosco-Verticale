@@ -39,7 +39,7 @@ while True:
             print('Wrong floor: floor number too big.\ninput a value lower or equal to 26')
             raise ValueError
         if piano < 0:
-            print('Wrong floor: floor number too big.\ninput a value higher or equal to 0') 
+            print('Wrong floor: floor number too small.\ninput a value higher or equal to 0') 
             raise ValueError
         break
     except:
